@@ -49,7 +49,7 @@ export default async function PaginaRelatorios({ searchParams }: { searchParams:
 
       <FiltrosRelatorio hoje={hoje} inicial={{ de, ate, categoria, responsavel }} categorias={categorias} responsaveis={responsaveis} />
 
-      <section aria-label="Totais" className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <section aria-label="Totais" className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4 [&>*]:min-w-0">
         <Total icone={Wallet} rotulo="Total no período" t={dados.total} classe="bg-gradient-to-br from-marinho-800 to-marinho-950 text-white" />
         <Total icone={CheckCircle2} rotulo="Pagas" t={dados.pagas} classe="bg-emerald-50 text-emerald-900" />
         <Total icone={CalendarClock} rotulo="Pendentes" t={dados.pendentes} classe="bg-roxo-50 text-roxo-900" />
@@ -72,7 +72,7 @@ export default async function PaginaRelatorios({ searchParams }: { searchParams:
         </div>
       ) : (
         <>
-          <div className="mt-6 grid gap-6 lg:grid-cols-5">
+          <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-5 [&>*]:min-w-0">
             <section className="cartao p-4 sm:p-6 lg:col-span-3">
               <h2 className="text-lg font-extrabold">Valores por mês</h2>
               <p className="mb-3 text-sm text-slate-500">Pagas, pendentes e vencidas</p>
