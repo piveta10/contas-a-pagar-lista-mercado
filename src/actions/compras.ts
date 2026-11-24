@@ -59,7 +59,7 @@ export async function adicionarItem(entrada: {
   data: string;
   descricao: string;
 }): Promise<Resultado<{ item: ItemCompra; duplicado: boolean }>> {
-    return protegerAcao<{ item: ItemCompra; duplicado: boolean }>(async () => {
+  return protegerAcao<{ item: ItemCompra; duplicado: boolean }>(async () => {
     const d = esquemaItem.parse(entrada);
     const listaId = await listaAtivaDaData(d.data);
 
