@@ -11,7 +11,7 @@ export default async function LayoutApp({ children }: { children: React.ReactNod
   const { responsaveis, atual } = await contextoUsuario();
 
   return (
-    <div className="min-h-dvh lg:pl-64">
+    <div className="min-h-dvh overflow-x-clip lg:pl-64">
       <BarraLateral />
 
       {/* Barra superior (celular/tablet) */}
