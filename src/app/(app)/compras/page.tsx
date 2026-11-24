@@ -22,7 +22,7 @@ export default async function PaginaCompras({ searchParams }: { searchParams: Pr
   const itens = listas.ativa?.itens ?? [];
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px] [&>*]:min-w-0">
       <div className="min-w-0">
         <Cabecalho titulo="Lista de Compras" subtitulo="Anote na hora em que lembrar. Tudo fica salvo automaticamente." />
 
