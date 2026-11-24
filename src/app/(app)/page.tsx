@@ -52,7 +52,7 @@ export default async function PaginaInicial() {
       )}
 
       {/* Cartões de resumo */}
-      <section aria-label="Resumo" className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
+      <section aria-label="Resumo" className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4 [&>*]:min-w-0">
         <CartaoResumo
           estilo="escuro"
           icone={Wallet}
@@ -88,7 +88,7 @@ export default async function PaginaInicial() {
         />
       </section>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-12">
+      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-12 [&>*]:min-w-0">
         {/* Contas que precisam de atenção */}
         <section className="cartao p-4 sm:p-6 lg:col-span-7" aria-labelledby="titulo-vencer">
           <div className="mb-3 flex items-center justify-between">
